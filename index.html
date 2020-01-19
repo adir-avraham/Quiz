@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Trivia App</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./css/mycss.css">
+    <meta name="viewport" content="width=device-width" , initial-scal-="1.0">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="jumbotron jumbotron-fluid bg-info">
+        <div class="container">
+            <h1 class="text-center text-light">What is your level of English?</h1>
+             <h6 class="text-center text-light mt-5">Microsoft course project <span><img src="./pic/logo.jpg" height="30px" width="90px" alt="pic"></span> | Building Interactive Prototypes using JavaScript | By Adir Avraham</h6>
+        </div>
+    </header>
+
+    <!-- MAIM -->
+    <div class="container">
+        <div class="row justify-content-lg-center">
+            <div class="card text-left col-lg-7 shadow-lg">
+                <div class="card-header">
+                    Quiz
+                </div>
+                <div id="questionDiv" class="card-body" style="display: inline-block">
+                    <h6 id="question" class="card-title mh-100" style="height: 70px">here comes the question</h6>
+
+                    <div class="form-check row ml-3 mt-2">
+                            <input class="form-check-input" type="radio" name="choices" id="inputA" value="A">
+                            <label id="choiceA" class="form-check-label" for="inputA">choiceA</label>
+                        </div>
+                        <div class="form-check row ml-3">
+                            <input class="form-check-input" type="radio" name="choices" id="inputB" value="B">
+                            <label id="choiceB" class="form-check-label" for="inputB">choiceB</label>
+                        </div>
+                        <div class="form-check row ml-3">
+                            <input class="form-check-input" type="radio" name="choices" id="inputC" value="C">
+                            <label id="choiceC" class="form-check-label" for="inputC">choiceC</label>
+                        </div>
+                        <div class="form-check row ml-3">
+                            <input class="form-check-input" type="radio" name="choices" id="inputD" value="D">
+                            <label id="choiceD" class="form-check-label" for="inputD">choiceD</label>
+                        </div>
+                    <button id="submitBtn" class="btn btn-info btn-sm mt-3">SUBMIT</button>
+                </div>
+            
+                <div id="resultsDiv" class="card-body" style="display: none">
+
+                </div>
+
+                <!-- Add Question Page -->
+                <div id="addQuestionDiv" class="card-body" style="display: none">
+                        <h5 id="question" class="card-title mh-100 text-center" style="height: 50px">Add a Question:</h5>
+                        <form id="addQuestionForm">
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-sm" id="fullQuestion" placeholder="Full Question...">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-sm" id="addedChoiceA" placeholder="Choice A...">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-sm" id="addedChoiceB" placeholder="Choice B...">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-sm" id="addedChoiceC" placeholder="Choice C...">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-sm" id="addedChoiceD" placeholder="Choice D...">
+                            </div>
+                                <div class="form-group row justify-content-lg-center">
+                                    <label for="inputEmail3" class="col-lg-3 col-form-label">Correct Answer:</label>    
+                                        <select id="answer" class="col-lg-5 form-control form-control-sm">
+                                            <option value="">Choose...</option>
+                                            <option value="A">choice A</option>
+                                            <option value="B">choice B</option>
+                                            <option value="C">choice C</option>
+                                            <option value="D">choice D</option>
+                                        </select>
+                                </div>        
+                                <button id="submitQuestionButton" type="button" class="btn btn-info btn-sm">Submit Question</button>
+                        </form>
+                </div>
+
+                <div id="counterQuestions" class="card-footer text-muted text-right">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="./js/data.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+</body>
+
+</html>
+
+<!-- some test to made chaches for pull request -->
